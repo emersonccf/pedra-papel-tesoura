@@ -1,0 +1,5 @@
+autopep8==1.5.7
+flake8==3.9.2
+mypy==0.910
+pylint==2.8.3
+unittest2==1.1.0
