@@ -22,3 +22,6 @@ Instale neste ambiente as dependencias do projeto
 Execute o projeto dentro do ambiente vitual
 
 > python app.py
+
+Maximize a tela do terminal para que não haja distroção da tela de apresentação
+Vrifique também o tamanho da fonte do terminal para que fique adequada.

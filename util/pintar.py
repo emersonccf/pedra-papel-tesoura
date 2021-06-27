@@ -40,6 +40,7 @@ class Pintar():
 
 
 if __name__ == "__main__":
+    """ Testes para verificar se estão funcionando bem """
     print(Pintar.vermelho('Atenção:'), Pintar.amarelo('você cometeu um erro!'))
     print(Pintar.verde('Atenção:'), Pintar.azul('você cometeu um erro!'))
     print(Pintar.vermelho('Atenção:'), Pintar.magenta('você cometeu um erro!'))

@@ -1,7 +1,10 @@
 import os
+from random import randint
+
 from art import tprint, FONT_NAMES
 from util.pintar import Pintar
 
+# dicionário de cores disponíveis para utiliza na composição da tela
 cores = {
     "amarelo": Pintar.YELLOW,
     "verde": Pintar.GREEN,
@@ -13,6 +16,7 @@ cores = {
 
 
 def limpar_tela():
+    """ Limpa a tela do console, precisa ser configurado para cada SO """
     os.system('cls')  # se unix os.system('clear')
 
 
@@ -27,6 +31,8 @@ def texto_para_tela(texto: str, cor: str):
 
 
 def constroi_tela():
+    """ Controi a tela de abertura do Jogo, para ser utilizada pela função
+    tela_de_abertura() deste módulo """
     textos = [
         'Pedra-Papel-Tesoura',
         'Papel-Pedra-Tesoura',
@@ -42,11 +48,14 @@ def constroi_tela():
         'negrito',
     ]
     limpar_tela()
-    for i, texto in enumerate(textos):
-        texto_para_tela(texto, cores[i])
+    """ for i, texto in enumerate(textos):
+        texto_para_tela(texto, cores[i]) """
+    for _ in range(5):
+        texto_para_tela(textos[randint(0, 4)], cores[randint(0, 3)])
 
 
 def tela_abertura():
+    """ Cria a tela de abertura com mensagem para o usuário """
     while True:
         constroi_tela()
         continuar = input(Pintar.amarelo("Iniciar o jogo? (s/n)? "))
@@ -55,4 +64,5 @@ def tela_abertura():
 
 
 if __name__ == '__main__':
+    """ testa a tela de abertura """
     tela_abertura()

@@ -90,7 +90,7 @@ class Main():
                 print(jogo)
                 rodada += 1
             print(jogo.vencedor())
-            continuar = input(p.amarelo("Deseja continuar jogando(s/n)? "))
+            continuar = input(p.amarelo("Deseja continuar jogando (s/n) ? "))
             if continuar.lower() in "naonão":
                 break
 
