@@ -1,4 +1,4 @@
-# Orientações para que possa rodar o projeto do jogo Pedra-Papel, no terminal.
+# Orientações para que possa excutar o projeto do jogo Pedra-Papel-Tesoura no terminal.
 
 # Colocando em prática conceitos de orientação a objetos em Python
 
@@ -23,5 +23,5 @@ Execute o projeto dentro do ambiente vitual
 
 > python app.py
 
-Maximize a tela do terminal para que não haja distroção da tela de apresentação
+Maximize a tela do terminal para que não haja distorção da tela de apresentação..
 Verifique também o tamanho da fonte do terminal para que fique adequada.
