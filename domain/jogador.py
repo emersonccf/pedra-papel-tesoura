@@ -21,6 +21,9 @@ class Jogador():
     def pontuacao(self, elemento: Elemento):
         """Adiciona a pontuação de acordo com o estado do elemento que o
         jogador escolheu para realizar o confronto"""
+        if not issubclass(elemento.__class__, Elemento):
+            raise ValueError(
+                f"Elemento informado não é válido! -> {type(elemento)}")
         self._pontuacao += elemento.estado_confronto
 
     def __str__(self):

@@ -1,3 +1,5 @@
+import random
+
 from domain.elemento import Elemento
 from domain.pedra import Pedra
 from domain.papel import Papel
@@ -9,6 +11,8 @@ from util.tela_abertura import tela_abertura, limpar_tela, texto_para_tela
 
 
 class Main():
+    # Lista de opções de cores, atributo de classe
+    cores = ['verde', 'vermelho', 'amarelo', 'azul', 'negrito', ]
 
     @staticmethod
     def informar_valor_inteiro(mensagem: str) -> int:
@@ -45,7 +49,8 @@ class Main():
         """
         limpar_tela()
         print("Iniciando Jogo:")
-        texto_para_tela("Pedra-Papel-Tesoura", "amarelo")
+        texto_para_tela("Pedra-Papel-Tesoura", random.choice(self.cores))
+        # TODO: Nome de jogador em branco trarar
         jogador1 = Jogador(input("Informe nome do Jogador 1: "))
         jogador2 = Jogador(input("Informe nome do Jogador 2: "))
         qtd_rodadas = self.verica_intervalo(1, 10,

@@ -1,5 +1,5 @@
 import os
-from random import randint
+import random
 
 from art import tprint, FONT_NAMES
 from util.pintar import Pintar
@@ -51,7 +51,7 @@ def constroi_tela():
     """ for i, texto in enumerate(textos):
         texto_para_tela(texto, cores[i]) """
     for _ in range(5):
-        texto_para_tela(textos[randint(0, 4)], cores[randint(0, 3)])
+        texto_para_tela(random.choice(textos), random.choice(cores))
 
 
 def tela_abertura():
