@@ -58,14 +58,14 @@ class Main():
                                             "entre 1 a 10")
         return JogoPedraPapelTesoura(jogador1, jogador2, qtd_rodadas)
 
-    def menu_op_elenetos(self, nm_jogador: str) -> Elemento:
+    def menu_op_elementos(self, nm_jogador: str) -> Elemento:
         """ Gera o menu de opções para que o Jogador faça sua escolha """
         print(f"{p.amarelo(nm_jogador)}, faça sua escolha:")
-        print(p.MAGENTA)
+        print(p.MAGENTA, end="")
         print("1- Pedra")
         print("2- Tesoura")
         print("3- Papel")
-        print(p.RESET)
+        print(p.RESET, end="")
         op = self.verica_intervalo(1, 3, f"Informe sua opção {nm_jogador}")
         if op == 1:
             return Pedra()
@@ -89,8 +89,8 @@ class Main():
             rodada = 0
             continuar = "n"
             while jogo.qtd_rodadas > rodada:
-                elem_jog1 = self.menu_op_elenetos(jogo.jogador1.nome)
-                elem_jog2 = self.menu_op_elenetos(jogo.jogador2.nome)
+                elem_jog1 = self.menu_op_elementos(jogo.jogador1.nome)
+                elem_jog2 = self.menu_op_elementos(jogo.jogador2.nome)
                 jogo.jogar(elem_jog1, elem_jog2)
                 print(jogo)
                 rodada += 1
